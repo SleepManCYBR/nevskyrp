@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NevskyRP — Свод правил</title>
+<meta name="description" content="Официальный регламент сервера NevskyRP для комфортной и качественной RolePlay игры.">
+<meta name="theme-color" content="#121316">
+<link rel="icon" href="https://files.catbox.moe/bzda8u.png">
+<meta property="og:title" content="NevskyRP — Свод правил">
+<meta property="og:image" content="https://files.catbox.moe/bzda8u.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.intro{display:none}[data-r],.rv{opacity:1!important}</style></noscript>
+</head>
+<body class="lock">
+
+<!-- Иконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M20 17v4H6.5A2.5 2.5 0 0 1 4 18.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-8 8c-1.3 0-2.6-.3-3.7-.9L4 20l1-4.2A8 8 0 1 1 20 12z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.1 1.3 6.1L12 16.4 6.5 19.5l1.3-6.1-4.5-4.1 6.1-.7z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M3 13l2-6h14l2 6v5h-3v-2H6v2H3z"/><path d="M3 13h18"/><circle cx="7.5" cy="14.8" r=".9"/><circle cx="16.5" cy="14.8" r=".9"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C9 4 4 10 4 20c10 0 16-5 16-16z"/><path d="M4 20c3-6 7-9 11-11"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-5.5 6.5-5.5s6.5 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.6 0 4.5 1.5 4.5 4.5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="16" r="4"/><path d="M10.8 13.2L20 4"/><path d="M16 8l3 3"/><path d="M13.5 10.5l2 2"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2 4 2 4H5"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6"/><path d="M10 17h6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2z"/><path d="M12 10v5"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="M2 12h4"/><path d="M18 12h4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H16"/></symbol>
+  </defs>
+</svg>
+
+<!-- Фон: лава-лампа -->
+<div class="lava" aria-hidden="true">
+  <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
+  <i class="blob b4"></i><i class="blob b5"></i><i class="blob b6"></i>
+</div>
+
+<!-- Интро -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-inner">
+    <div class="intro-mark glass"><img src="https://files.catbox.moe/bzda8u.png" alt=""></div>
+    <div class="intro-word">NevskyRP</div>
+    <div class="intro-bar"><i></i></div>
+  </div>
+</div>
+
+<!-- Навигация -->
+<header class="top" id="top">
+  <nav class="nav glass" data-r style="--d:.3s" aria-label="Основная навигация">
+    <a class="brand" href="#top">
+      <img src="https://files.catbox.moe/bzda8u.png" alt="">
+      <span>NevskyRP</span>
+    </a>
+    <div class="links">
+      <a href="#art1">Базовые правила</a>
+      <a href="#art3">Полиция</a>
+      <a href="#art6">ПДД</a>
+      <a href="#art7">Зелёная зона</a>
+      <a href="#art13">Оружие</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-mark glass" data-r style="--d:.4s">
+      <img src="https://files.catbox.moe/bzda8u.png" alt="NevskyRP">
+    </div>
+    <h1 data-r style="--d:.5s">Свод правил NevskyRP</h1>
+    <p class="lead" data-r style="--d:.62s">Изучите регламент нашего сервера для комфортной и качественной RolePlay игры.</p>
+
+    <label class="search glass" data-r style="--d:.74s">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="q" type="search" placeholder="Поиск по правилам" autocomplete="off" aria-label="Поиск по правилам">
+    </label>
+
+    <div class="chips" id="chips" data-r style="--d:.86s" role="group" aria-label="Статьи"></div>
+  </section>
+
+  <section id="list" aria-live="polite"></section>
+
+  <div class="empty" id="empty" hidden>
+    <strong>Ничего не найдено</strong>
+    <span>Измените запрос или выберите «Все статьи».</span>
+  </div>
+</main>
+
+<footer class="foot wrap">
+  <img src="https://files.catbox.moe/bzda8u.png" alt="NevskyRP">
+  <p>Все права защищены NevskyRp © 2026</p>
+</footer>
+
+<div class="toast glass" id="toast" role="status" aria-live="polite">Правило скопировано!</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Данные: [номер, название, описание, наказание, (1 = тяжкое)] ---------- */
+  var A = [
+    { n: 1, i: "book", s: "RP-термины", t: "RP-термины и правила боя", r: [
+      ["1.1", "DM (Deathmatch)", "Убийство или нанесение урона без IC-причины.", "Кик / Бан от 1 до 3 дней"],
+      ["1.2", "DB (DriveBy)", "Намеренный таран или наезд на игроков автомобилем без причинения IC-логики.", "Кик / Бан на 1 день"],
+      ["1.3", "MG (Metagaming)", "Использование OOC-информации (Discord, никнеймы, стримы) в IC-процессе.", "Бан от 1 до 3 дней"],
+      ["1.4", "PG (Powergaming)", "Преувеличение возможностей своего персонажа (например, 1 против 3 с оружием).", "Кик / Бан на 1 день"],
+      ["1.5", "SK (Spawn Kill)", "Убийство или нападки на спавнах (больница, спавн гражданских, участок).", "Бан от 1 до 5 дней"],
+      ["1.6", "TK (Team Kill)", "Убийство или урон игрокам своей фракции.", "Увольнение / Бан 1–3 дня"],
+      ["1.7", "RK (Revenge Kill)", "Возврат на место смерти в течение 10 минут с целью мести.", "Кик / Бан на 1 день"],
+      ["1.8", "NonRP", "Поведение, противоречащее логике реальной жизни и роли персонажа.", "Кик / Бан на 1 день"],
+      ["1.9", "CK (Character Kill)", "Полное убийство персонажа (осуществляется с согласия Администрации).", "С согласия адм."],
+      ["1.10", "Repeat Kill", "Повторное возвращение на место смерти после RK.", "Бан от 1 до 3 дней"],
+      ["1.11", "FF (Friendly Fire)", "Нанесение урона своему софракционцу без убийства.", "Выговор / Кик"],
+      ["1.12", "BH (BunnyHop)", "Бег с прыжками для ускорения во время RP процесса.", "Кик"],
+      ["1.13", "Багоюз", "Использование абузов, ошибок игры или сбивов анимаций для преимущества.", "Бан 30 дней / Перманентно", 1],
+      ["1.14", "Читы / Софт", "Использование любых сторонних вредоносных программ и софтов.", "Перманентный бан", 1]
+    ]},
+    { n: 2, i: "chat", s: "Общение и уход", t: "Общение и уход от RP", r: [
+      ["2.1", "OOC в IC", "Сообщения из реала в IC-чат без Slash (//) в начале предложения.", "Мут 10–20 мин / Кик"],
+      ["2.2", "RP Quit", "Выход из игры, АФК или Reset во время погони, задержания или RP действия.", "Бан от 1 до 3 дней"],
+      ["2.3", "Музыка в Voice", "Включение музыки в голосовой чат (Запрещено в ЗЗ, а также без разрешения администрации и согласия игроков).", "Мут 30–60 мин / Кик"],
+      ["2.4", "Изменение голоса", "Использование Soundpad и постороннего софта для создания помех и стонов.", "Мут 30–120 мин / Бан 1 день"],
+      ["2.5", "Неадекватность", "Оскорбление родных, нацизм, токсичность, розжиг межнациональной розни.", "Мут 60–120 мин / Бан 3–7 дней"],
+      ["2.6", "Оск. родни", "Оскорбление родственников игроков в любой форме.", "Бан на 3–7 дней"]
+    ]},
+    { n: 3, i: "shield", s: "Полиция", t: "Правила для полиции", r: [
+      ["3.1", "NonRP Cuff", "Надевание наручников (кафф) без RP-причины. (Исключение: разрешен фарм ХП с согласия игрока).", "Бан 1 день"],
+      ["3.2", "Проверка без оснований", "Просмотр планшета/КПК без веских оснований.", "Бан 1 день"],
+      ["3.3", "Cuff ради мести", "Надевание наручников с целью помешать или отомстить игроку.", "Бан 3 дня"],
+      ["3.4", "NonRP Tazer", "Использование тайзера без надлежащих RP-причин.", "Бан от 6 часов до 2 дней"],
+      ["3.5", "Tazer в ЗЗ", "Применение тайзера в Зелёной Зоне без причин.", "Бан 1–2 дня"],
+      ["3.6", "Превышение силы", "Применение физической силы или спецсредств без необходимости.", "6000€ либо Бан 1 день"],
+      ["3.7", "Преступные действия", "Ограбления и совершение преступлений от лица гос. сотрудника.", "Снятие с должности"]
+    ]},
+    { n: 4, i: "user", s: "Скины", t: "Внешний вид / Скин персонажа", r: [
+      ["4.1", "Соответствие роли", "Одежда персонажа должна соответствовать его роли (Пример: прокурор обязан находиться в соответствующей форме).", "Предупреждение"],
+      ["4.2", "Скины животных", "Все скины животных полностью запрещены.", "Предупреждение / Бан 1 день"],
+      ["4.3", "Провокационные скины", "Скин, провоцирующий людей на розжиг межнациональной розни, строго запрещен.", "Перманентный бан", 1]
+    ]},
+    { n: 5, i: "star", s: "Администрация", t: "Взаимодействие с администрацией", r: [
+      ["5.1", "Оскорбление адм.", "Оскорбление членов администрации в любой чат/соцсети.", "Бан на 1 день"],
+      ["5.2", "Неуважение", "Проявление неуважительного отношения к администраторам.", "Бан на 1 день"],
+      ["5.3", "Троллинг", "Троллинг или систематическое перебивание администрации.", "Бан на 3 дня"],
+      ["5.4", "Обращение без приписки", "Обращение к администрации, когда у них нет NonRP приписки, запрещено.", "Запрещено"]
+    ]},
+    { n: 6, i: "car", s: "ПДД", t: "Правила дорожного движения (ПДД)", r: [
+      ["6.1", "Скоростной режим", "В городах — до 60 км/ч. На шоссе — до 120 км/ч. На парковках и спавнах — до 30 км/ч.", "Штраф 1 500€ – 5 000€"],
+      ["6.2", "Полосы и встреча", "Запрещен выезд на встречку без цели обгона, разворот через сплошную, езда по газонам и обочинам.", "3 000€ / Изъятие В/У"],
+      ["6.3", "Спецтранспорт", "При приближении авто с маячками и сиреной (Полиция, Скорая, МЧС) перестроиться вправо и пропустить.", "Штраф 4 000€"],
+      ["6.4", "Светофоры", "Проезд на красный свет, игнорирование знака «STOP» и помеха главной дороге запрещены.", "Штраф 2 000€"],
+      ["6.5", "ДТП и скрытие", "Водители обязаны оформить Европротокол/вызвать полицию. Попытка скрыться даёт право объявить в розыск.", "6 000€ + Эвакуация ТС"],
+      ["6.6", "Опасное вождение", "Подрезания, резкое торможение перед ТС, дрифт и «шашки» по полосам в городе запрещены.", "5 000€ / Конфискация 24ч"],
+      ["6.7", "Парковка", "Запрещена остановка на дороге (без аварийки), перед гос. зданиями, на газонах, перекрёстках, мостах.", "2 500€ + Эвакуация"],
+      ["6.8", "Состояние ТС", "Езда на разбитом ТС (без дверей/капота, со дымящимся двигателем или пробитыми колесами) = NonRP.", "2 000€ + Эвакуация"],
+      ["6.9", "Номера / Тонировка", "Езда без гос. номеров или с глухой тонировкой лобового стекла.", "Штраф 3 500€"],
+      ["6.10", "Пьяное вождение", "Вождение ТС под воздействием алкоголя или наркотических веществ.", "8 000€ + Лишение В/У"]
+    ]},
+    { n: 7, i: "leaf", s: "Зелёная зона", t: "Зелёная зона (Green Zone)", r: [
+      ["7.1", "Оружие в ЗЗ", "Нахождение с оружием в зеленой зоне (Исключение: силовые гос. сотрудники).", "Предупреждение / Бан 1 день"],
+      ["7.2", "Драки / Провокации", "Начинать драку или провоцировать конфликт в зеленой зоне.", "Бан на 2 дня"],
+      ["7.3", "Уход в ЗЗ", "Намеренный уход от погони или перестрелки в Зеленую Зону.", "Бан на 3 дня"],
+      ["7.4", "Стрельба / Взрывы", "Открытие огня в ЗЗ, бросание дымовых шашек, гранат или закладывание С4.", "Бан 7д / Перманентно (C4)", 1]
+    ]},
+    { n: 8, i: "users", s: "Похищения", t: "Правила похищения и захвата", r: [
+      ["8.1", "Состав группы", "Любое похищение проводится группой минимум из двух человек.", "Соло: Бан на 2 дня"],
+      ["8.2", "Требования к жертве", "Запрещено требовать что-либо у жертвы. Нужно вызвать переговорщика. В случае неприбытия — вы вправе делать с жертвой что угодно.", "См. регламент"],
+      ["8.3", "Захваты / Теракты", "Сообщать администрации заранее. Группа должна состоять минимум из 4 вооруженных человек.", "Без уведомления: Бан 7д"],
+      ["8.4", "Похищение переговорщика", "Категорически запрещено похищать самого переговорщика.", "Бан 12 часов"],
+      ["8.5", "Похищение в ЗЗ", "Запрещено производить похищения людей в Зеленой Зоне.", "Строго запрещено"]
+    ]},
+    { n: 9, i: "key", s: "Отмычки", t: "Правила использования отмычек", r: [
+      ["9.1", "Отмычки в ЗЗ", "Использование отмычек в Зеленой Зоне.", "Бан 5 дней"],
+      ["9.2", "Без отыгровки", "Использование отмычек без надлежащих RP отыгровок.", "Бан 2 дня"],
+      ["9.3", "В служебном авто", "Использование отмычек, когда человек находится внутри служебного ТС.", "Бан 3 дня"],
+      ["9.4", "Во время проц. действий", "Использование отмычек во время проведения процессуальных действий.", "Бан 2 дня"]
+    ]},
+    { n: 10, i: "flag", s: "КПП", t: "КПП / Блокпост", r: [
+      ["10.1", "Игнорирование остановки", "Игнорирование требования остановки транспортного средства на КПП.", "Штраф 5 000€"],
+      ["10.2", "Оружие на КПП", "Использование или демонстрация оружия на КПП.", "Штраф 8 000€"],
+      ["10.3", "Отказ от документов", "Отказ от предъявления документов по требованию на блокпосту.", "Штраф 6 000€"],
+      ["10.4", "Проверка без причины", "Проверка транспорта полицейскими без веской RP-причины.", "Наказуемо"]
+    ]},
+    { n: 11, i: "doc", s: "Процессуальный кодекс", t: "Процессуальный кодекс", r: [
+      ["11.1", "Непредставление", "Сотрудник не представился при обращении/задержании.", "Штраф 3 500€"],
+      ["11.2", "Права Миранды", "Незачитание прав задерживаемому (Миранда).", "Штраф 5 000€"],
+      ["11.3", "Отсутствие записи", "Отсутствие видеозаписи факта нарушения со стороны сотрудника.", "Штраф 4 000€"],
+      ["11.4", "Отсутствие улик", "Полное отсутствие доказательств вины гражданина.", "Штраф 7 000€"],
+      ["11.5", "Состав преступления", "Отсутствие состава (1. дата/время; 2. кто задержал; 3. обстоятельства; 4-5. статьи). При отсутствии судьи суд может провести прокурор. При >3 нарушений — отпустить задержанного.", "Штраф 4 500€"]
+    ]},
+    { n: 12, i: "alert", s: "Тяжкие преступления", t: "Тяжкие преступления", r: [
+      ["12.1–12.6", "Перечень ограблений", "Ограбление банка, ювелирного магазина, сейфов, контейнеров, заправок, магазинов, торговых банкоматов.", "Тяжкое преступление", 1],
+      ["12.7", "Убийство", "Убийство человека или представителя власти при исполнении.", "Высшая мера", 1]
+    ]},
+    { n: 13, i: "target", s: "Оружие", t: "Оружие и лицензии", r: [
+      ["§13.0", "Без лицензии", "Использование и ношение оружия без имеющейся лицензии.", "3000€ / 10 мин КПЗ"],
+      ["§13.1", "Открытое ношение", "Открытое ношение оружия в общественных местах.", "5000€ / 15 мин КПЗ"],
+      ["§13.2", "Оружие в людном месте", "Использование оружия в людном месте без веских оснований.", "7000€ / 15 мин КПЗ"],
+      ["§13.3", "Передача оружия", "Передача огнестрельного оружия третьим лицам.", "5000€ / 10 мин КПЗ"],
+      ["§13.4", "Нападение на госслужащего", "Вооруженное или физическое нападение на государственного служащего.", "КПЗ 30 минут"],
+      ["§13.5", "Сопротивление с оружием", "Использование огнестрельного оружия с целью оказания сопротивления при задержании.", "КПЗ 25 минут"]
+    ]}
+  ];
+
+  /* ---------- Хелперы ---------- */
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var esc = function (s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+  function plural(n) {
+    var m10 = n % 10, m100 = n % 100, w = "правил";
+    if (m10 === 1 && m100 !== 11) w = "правило";
+    else if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) w = "правила";
+    return n + " " + w;
+  }
+
+  var list = $("#list"), chips = $("#chips"), empty = $("#empty"), input = $("#q"), toast = $("#toast");
+  var state = { c: "all", q: "" };
+
+  /* ---------- Рендер ---------- */
+  chips.innerHTML =
+    '<button class="chip" type="button" data-c="all" aria-pressed="true">Все статьи</button>' +
+    A.map(function (a) {
+      return '<button class="chip" type="button" data-c="' + a.n + '" aria-pressed="false">' + esc(a.s) + "</button>";
+    }).join("");
+
+  list.innerHTML = A.map(function (a) {
+    var cards = a.r.map(function (r) {
+      return '<button class="card glass rv" type="button" data-copy="' +
+        esc(r[0] + " " + r[1] + ". " + r[2] + " Наказание: " + r[3]) + '">' +
+        '<span class="c-top"><span class="c-code">' + esc(r[0]) + '</span>' +
+        '<svg class="ic c-copy" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg></span>' +
+        '<span class="c-title">' + esc(r[1]) + "</span>" +
+        '<span class="c-desc">' + esc(r[2]) + "</span>" +
+        '<span class="c-pen' + (r[4] ? " hard" : "") + '">' + esc(r[3]) + "</span></button>";
+    }).join("");
+    return '<article class="article" id="art' + a.n + '" data-n="' + a.n + '">' +
+      '<header class="a-head rv"><span class="a-icon glass"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-' + a.i + '"/></svg></span>' +
+      '<div><div class="a-num">Статья ' + a.n + '</div><h2 class="a-title">' + esc(a.t) + "</h2></div>" +
+      '<span class="a-count">' + plural(a.r.length) + "</span></header>" +
+      '<div class="grid">' + cards + "</div></article>";
+  }).join("");
+
+  var articles = Array.prototype.map.call(list.querySelectorAll(".article"), function (el, idx) {
+    var cards = Array.prototype.map.call(el.querySelectorAll(".card"), function (c) {
+      return { el: c, txt: c.textContent.toLowerCase() };
+    });
+    return { el: el, n: A[idx].n, cards: cards, count: el.querySelector(".a-count") };
+  });
+
+  /* ---------- Фильтры ---------- */
+  function swap() {
+    var items = list.querySelectorAll(".rv.in.done:not([hidden])");
+    Array.prototype.forEach.call(items, function (el, i) {
+      el.style.setProperty("--d", Math.min(i * 0.03, 0.4) + "s");
+      el.classList.remove("swap");
+      void el.offsetWidth;
+      el.classList.add("swap");
+    });
+  }
+
+  function apply() {
+    var q = state.q.trim().toLowerCase(), total = 0;
+    articles.forEach(function (a) {
+      var vis = 0;
+      a.cards.forEach(function (c) {
+        var ok = (state.c === "all" || state.c === a.n) && (!q || c.txt.indexOf(q) > -1);
+        c.el.hidden = !ok;
+        if (ok) vis++;
+      });
+      a.el.hidden = !vis;
+      if (vis) a.count.textContent = plural(vis);
+      total += vis;
+    });
+    empty.hidden = total > 0;
+    swap();
+  }
+
+  function setChip(c) {
+    state.c = c;
+    Array.prototype.forEach.call(chips.children, function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-c") === String(c)));
+    });
+  }
+
+  chips.addEventListener("click", function (e) {
+    var b = e.target.closest(".chip");
+    if (!b) return;
+    var v = b.getAttribute("data-c");
+    state.q = ""; input.value = "";
+    setChip(v === "all" ? "all" : Number(v));
+    apply();
+    if (v !== "all") list.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  input.addEventListener("input", function () {
+    state.q = input.value;
+    setChip("all");
+    apply();
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.links a[href^="#art"]'), function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var id = a.getAttribute("href").slice(1);
+      state.q = ""; input.value = "";
+      setChip("all"); apply();
+      requestAnimationFrame(function () {
+        var t = document.getElementById(id);
+        if (t) t.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  });
+
+  /* ---------- Копирование ---------- */
+  var toastTimer;
+  function showToast() {
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 1800);
+  }
+  function copy(text) {
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      ta.remove();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(fallback);
+    } else { fallback(); }
+    showToast();
+  }
+
+  list.addEventListener("click", function (e) {
+    var c = e.target.closest(".card");
+    if (c) copy(c.getAttribute("data-copy"));
+  });
+
+  /* Подсветка под курсором */
+  list.addEventListener("pointermove", function (e) {
+    var c = e.target.closest(".card");
+    if (!c) return;
+    var r = c.getBoundingClientRect();
+    c.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    c.style.setProperty("--my", (e.clientY - r.top) + "px");
+  });
+
+  /* Завершение анимации появления */
+  list.addEventListener("animationend", function (e) {
+    var t = e.target;
+    if (t.classList && t.classList.contains("rv")) {
+      t.classList.add("done");
+      t.classList.remove("swap");
+      t.style.removeProperty("--d");
+    }
+  });
+
+  /* ---------- Появление блоков при прокрутке ---------- */
+  function startReveal() {
+    var els = list.querySelectorAll(".rv");
+    if (!("IntersectionObserver" in window)) {
+      Array.prototype.forEach.call(els, function (el) { el.classList.add("in", "done"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      var i = 0;
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.style.setProperty("--d", Math.min(i++ * 0.06, 0.42) + "s");
+        en.target.classList.add("in");
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+    Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+  }
+
+  /* ---------- Интро ---------- */
+  var intro = $("#intro"), finished = false;
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function finish() {
+    if (finished) return;
+    finished = true;
+    intro.classList.add("out");
+    document.body.classList.remove("lock");
+    document.body.classList.add("ready");
+    startReveal();
+    setTimeout(function () { intro.remove(); }, 1300);
+  }
+
+  if (reduce) { finish(); }
+  else {
+    setTimeout(finish, 2500);
+    intro.addEventListener("click", finish);
+  }
+})();
+</script>
+</body>
+</html>
