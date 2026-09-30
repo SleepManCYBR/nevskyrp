@@ -40,14 +40,13 @@
 
 <!-- Фон: лава-лампа -->
 <div class="lava" aria-hidden="true">
-  <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i>
-  <i class="blob b4"></i><i class="blob b5"></i><i class="blob b6"></i>
+  <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i>
 </div>
 
 <!-- Интро -->
 <div class="intro" id="intro" aria-hidden="true">
   <div class="intro-inner">
-    <div class="intro-mark glass"><img src="https://files.catbox.moe/bzda8u.png" alt=""></div>
+    <div class="intro-mark"><img src="https://files.catbox.moe/bzda8u.png" alt=""></div>
     <div class="intro-word">NevskyRP</div>
     <div class="intro-bar"><i></i></div>
   </div>
@@ -55,26 +54,25 @@
 
 <!-- Навигация -->
 <header class="top" id="top">
-  <nav class="nav glass" data-r style="--d:.3s" aria-label="Основная навигация">
-    <a class="brand" href="#top">
-      <img src="https://files.catbox.moe/bzda8u.png" alt="">
-      <span>NevskyRP</span>
-    </a>
-    <div class="links">
+  <nav class="nav" data-r style="--d:.3s" aria-label="Основная навигация">
+    <a class="brand" href="#top">NevskyRP</a>
+    <div class="links" id="links">
+      <i class="pill"></i>
       <a href="#art1">Базовые правила</a>
       <a href="#art3">Полиция</a>
       <a href="#art6">ПДД</a>
       <a href="#art7">Зелёная зона</a>
       <a href="#art13">Оружие</a>
     </div>
+    <button class="nav-search" type="button" id="navSearch">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg>
+      <span>Поиск</span>
+    </button>
   </nav>
 </header>
 
 <main class="wrap">
   <section class="hero">
-    <div class="hero-mark glass" data-r style="--d:.4s">
-      <img src="https://files.catbox.moe/bzda8u.png" alt="NevskyRP">
-    </div>
     <h1 data-r style="--d:.5s">Свод правил NevskyRP</h1>
     <p class="lead" data-r style="--d:.62s">Изучите регламент нашего сервера для комфортной и качественной RolePlay игры.</p>
 
@@ -95,7 +93,6 @@
 </main>
 
 <footer class="foot wrap">
-  <img src="https://files.catbox.moe/bzda8u.png" alt="NevskyRP">
   <p>Все права защищены NevskyRp © 2026</p>
 </footer>
 
@@ -104,6 +101,11 @@
 <script>
 (function () {
   "use strict";
+
+  /* Слабое устройство — меньше анимируемых слоёв */
+  if ((navigator.deviceMemory || 8) <= 4 || (navigator.hardwareConcurrency || 8) <= 4) {
+    document.documentElement.classList.add("lite");
+  }
 
   /* ---------- Данные: [номер, название, описание, наказание, (1 = тяжкое)] ---------- */
   var A = [
@@ -241,7 +243,7 @@
         '<svg class="ic c-copy" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-copy"/></svg></span>' +
         '<span class="c-title">' + esc(r[1]) + "</span>" +
         '<span class="c-desc">' + esc(r[2]) + "</span>" +
-        '<span class="c-pen' + (r[4] ? " hard" : "") + '">' + esc(r[3]) + "</span></button>";
+        '<span class="c-pen ' + (/бан/i.test(r[3]) ? "ban" : "warn") + '">' + esc(r[3]) + "</span></button>";
     }).join("");
     return '<article class="article" id="art' + a.n + '" data-n="' + a.n + '">' +
       '<header class="a-head rv"><span class="a-icon glass"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-' + a.i + '"/></svg></span>' +
@@ -321,6 +323,46 @@
     });
   });
 
+  /* ---------- Хедер: плавающая плашка и подсветка раздела ---------- */
+  var linksBox = $("#links"), pill = $(".pill", linksBox);
+  var navLinks = Array.prototype.slice.call(linksBox.querySelectorAll("a")), activeLink = null;
+
+  function place(a) {
+    if (!a) { pill.style.opacity = 0; return; }
+    pill.style.opacity = 1;
+    pill.style.width = a.offsetWidth + "px";
+    pill.style.transform = "translateX(" + a.offsetLeft + "px)";
+  }
+  navLinks.forEach(function (a) {
+    a.addEventListener("mouseenter", function () { place(a); });
+    a.addEventListener("focus", function () { place(a); });
+  });
+  linksBox.addEventListener("mouseleave", function () { place(activeLink); });
+
+  var spyRaf = 0;
+  function spy() {
+    spyRaf = 0;
+    var cur = null;
+    navLinks.forEach(function (a) {
+      var t = document.getElementById(a.getAttribute("href").slice(1));
+      if (t && !t.hidden && t.getBoundingClientRect().top <= 170) cur = a;
+    });
+    if (cur !== activeLink) {
+      if (activeLink) activeLink.classList.remove("on");
+      activeLink = cur;
+      if (cur) cur.classList.add("on");
+      place(cur);
+    }
+  }
+  window.addEventListener("scroll", function () {
+    if (!spyRaf) spyRaf = requestAnimationFrame(spy);
+  }, { passive: true });
+
+  $("#navSearch").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(function () { input.focus({ preventScroll: true }); }, 450);
+  });
+
   /* ---------- Копирование ---------- */
   var toastTimer;
   function showToast() {
@@ -347,14 +389,20 @@
     if (c) copy(c.getAttribute("data-copy"));
   });
 
-  /* Подсветка под курсором */
+  /* Подсветка под курсором (throttle через rAF) */
+  var pmRaf = 0, pmEv = null;
   list.addEventListener("pointermove", function (e) {
-    var c = e.target.closest(".card");
-    if (!c) return;
-    var r = c.getBoundingClientRect();
-    c.style.setProperty("--mx", (e.clientX - r.left) + "px");
-    c.style.setProperty("--my", (e.clientY - r.top) + "px");
-  });
+    pmEv = e;
+    if (pmRaf) return;
+    pmRaf = requestAnimationFrame(function () {
+      pmRaf = 0;
+      var c = pmEv.target.closest && pmEv.target.closest(".card");
+      if (!c) return;
+      var r = c.getBoundingClientRect();
+      c.style.setProperty("--mx", (pmEv.clientX - r.left) + "px");
+      c.style.setProperty("--my", (pmEv.clientY - r.top) + "px");
+    });
+  }, { passive: true });
 
   /* Завершение анимации появления */
   list.addEventListener("animationend", function (e) {
