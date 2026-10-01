@@ -35,8 +35,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .ic {
   width: 24px; height: 24px;
-  fill: none; stroke: currentColor; stroke-width: 1.6;
-  stroke-linecap: round; stroke-linejoin: round;
+  fill: currentColor; stroke: none;
   flex: none;
 }
 
@@ -174,12 +173,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .top {
   position: fixed; top: 16px; left: 0; right: 0; z-index: 50;
   display: flex; justify-content: center;
-  padding: 0 24px; pointer-events: none;
+  padding: 0 20px; pointer-events: none;
 }
 .nav {
   pointer-events: auto;
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  width: min(1680px, 100%);
+  width: min(1180px, 100%);
   padding: 8px 10px 8px 22px;
   border-radius: 999px;
   background:
@@ -222,7 +221,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- Hero ---------- */
 
-.wrap { width: min(1680px, 100% - 48px); margin-inline: auto; }
+.wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
 
 .hero {
   display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 22px;
@@ -302,13 +301,13 @@ h1 {
 
 .grid {
   display: grid; gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
 }
 
 .card {
   position: relative; overflow: hidden;
   display: flex; flex-direction: column; gap: 10px;
-  min-height: 128px; padding: 18px 20px 18px;
+  min-height: 178px; padding: 20px 20px 18px;
   border-radius: 22px;
   transition: transform .45s var(--ease), border-color .3s;
 }
