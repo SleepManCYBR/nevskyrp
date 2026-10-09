@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=10">
 <noscript><style>.intro{display:none}[data-r],.rv{opacity:1!important}</style></noscript>
 </head>
 <body class="lock">
@@ -84,15 +84,31 @@
 
 <main class="wrap">
   <section class="hero">
-    <h1 data-r style="--d:.5s">Свод правил NevskyRP</h1>
-    <p class="lead" data-r style="--d:.62s">Изучите регламент нашего сервера для комфортной и качественной RolePlay игры.</p>
+    <span class="eyebrow" data-r style="--d:.42s">Официальный регламент · Санкт-Петербург</span>
+    <h1 data-r style="--d:.5s">Свод правил<br><em>NevskyRP</em></h1>
+    <p class="lead" data-r style="--d:.62s">Здесь — всё, что помогает городу оставаться честным, живым и по-настоящему RP.</p>
 
-    <label class="search glass" data-r style="--d:.74s">
+    <section class="discipline" data-r style="--d:.69s" aria-label="Как работает система наказаний">
+      <div class="discipline-intro">
+        <span class="discipline-kicker">Система наказаний</span>
+        <strong>Честная эскалация</strong>
+        <p>Нарушение оценивается по ситуации и повторяемости. Чем серьёзнее проступок — тем выше уровень ответственности.</p>
+      </div>
+      <div class="discipline-steps">
+        <div class="discipline-step warn"><b>01</b><span>Предупреждение</span><small>Первый сигнал</small></div>
+        <div class="discipline-line"></div>
+        <div class="discipline-step kick"><b>02</b><span>Кик</span><small>3 предупреждения</small></div>
+        <div class="discipline-line"></div>
+        <div class="discipline-step ban"><b>03</b><span>Бан</span><small>3 кика за неделю</small></div>
+      </div>
+    </section>
+
+    <label class="search glass" data-r style="--d:.78s">
       <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-search"/></svg>
       <input id="q" type="search" placeholder="Поиск по правилам" autocomplete="off" aria-label="Поиск по правилам">
     </label>
 
-    <div class="filters" data-r style="--d:.86s">
+    <div class="filters" data-r style="--d:.9s">
       <div class="chips" id="chips" role="group" aria-label="Части"></div>
       <div class="chips sub" id="sub" role="group" aria-label="Статьи" hidden></div>
     </div>
@@ -107,7 +123,7 @@
 </main>
 
 <footer class="foot wrap">
-  <p>Все права защищены NevskyRp © 2026</p>
+  <p>NevskyRP © 2026 · Правила могут меняться — следите за обновлениями.</p>
 </footer>
 
 <div class="toast glass" id="toast" role="status" aria-live="polite">Правило скопировано!</div>
